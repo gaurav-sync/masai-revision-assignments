@@ -9,7 +9,48 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+    <div id="navbar">
+
+        <div id="leftnav">
+            <div><img src="https://www.pngkey.com/png/full/610-6103115_imgur-logo-png.png" alt="logo">
+            <i class="fa-solid fa-chevron-down" style="color: white; margin-left: 10px; margin-right: 10px;"></i>
+            </div>
+            <div><i class="fa-solid fa-cloud-arrow-up"></i> New Post 
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div>Go Ad-Free</div>
+        </div>
+
+        <div id="rightnav">
+
+            <div id="searchbox">
+                <input type="text" id="searchinput"
+                @click="state = 'opan'" @blur="state='close'"
+                >
+                <i id="searchlogo" class="fa-sharp fa-solid fa-magnifying-glass" style="color: white; margin-right: 10px;"></i>
+            </div>
+            
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 35%;">
+            <i class="fa-solid fa-comment-dots" style="color: white;"></i>
+            <i class="fa-regular fa-bell" style="color: white;"></i>
+            <p style="color: white;">gauravsapkal</p>
+        </div>
+        </div>
+    </div>
+    
+    <h1 id="topheading">The Most Viral images on the Internet, sorted by Popularity</h1>
+    <p id="headbottom">Today's most popular posts.</p>
+
+    <div id="parent">
+        <div id="subparent">
+           
+        
+        </div>
+        <div class="loader"></div>
+    </div>
     
 </body>
 </html>
-<link rel="stylesheet" href="index.js">
+<script src="index.js"></script>
+<script src="https://kit.fontawesome.com/bccd922fb7.js" crossorigin="anonymous"></script>

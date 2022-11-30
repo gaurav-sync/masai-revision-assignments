@@ -1,0 +1,149 @@
+#navbar{
+    background-color: #34373c;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+body{
+    background-color: #141518;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#leftnav{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+    margin-left: 8%;
+}
+
+#leftnav img{
+    height: 30px;
+    width: 100px;
+}
+
+#leftnav div{
+    padding: 8px;
+    border-radius: 5px;
+    width: 28%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#leftnav > div:nth-child(2){
+    background-color: #1bb76e;
+    color: white;
+}
+
+#leftnav > div:nth-child(3){
+    background-color: #ff7d00;
+    color: white;
+}
+
+#rightnav{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+    margin-right: 8%;
+}
+
+#searchinput{
+    background-color: #474a4f;
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    outline: none;
+    border: none;
+    width: 100%;
+    /* display: none; */
+}
+
+#searchbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #474a4f;
+    width: 260px;
+    /* display: none; */
+}
+
+#topheading{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#headbottom{
+    color: gray;
+    font-size: medium;
+    text-align: center;
+}
+
+
+#parent{
+    width: 85%;
+    margin: auto;
+    
+    margin-top: 50px;
+    background-color: #34373c;
+    border: 2px solid #34373c;
+}
+
+
+#subparent{
+    
+    width: 94%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 35px;
+}
+
+#subparent > div > img{
+    width: 100%;
+}
+
+#subparent > div{
+    border: 1px solid #212327;;
+}
+
+
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    margin: auto;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin-top: 20px;
+    opacity: 0;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .loader.show{
+    opacity: 1;
+  }
