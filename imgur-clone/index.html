@@ -25,8 +25,7 @@
         <div id="rightnav">
 
             <div id="searchbox">
-                <input type="text" id="searchinput"
-                @click="state = 'opan'" @blur="state='close'"
+                <input type="text" id="searchinput" oninput="debounce()"
                 >
                 <i id="searchlogo" class="fa-sharp fa-solid fa-magnifying-glass" style="color: white; margin-right: 10px;"></i>
             </div>
@@ -37,6 +36,10 @@
             <p style="color: white;">gauravsapkal</p>
         </div>
         </div>
+    </div>
+
+    <div id="databox">
+                
     </div>
     
     <h1 id="topheading">The Most Viral images on the Internet, sorted by Popularity</h1>
