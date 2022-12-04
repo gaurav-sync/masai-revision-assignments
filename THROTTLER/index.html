@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttling</title>
+    <style>
+        #def {
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        #throttle,
+        #default,
+        #debouncetext {
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: 20px;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+        }
+
+        input{
+            margin-left: 20px;
+        }
+
+
+        #trackpad{
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Throttling Practical Example</h1><br>
+
+    <div>
+        <p id="def">Default: </p>
+        <input type="text" id="input" oninput="def()" placeholder="Normal Code">
+        <p id="default"></p><br><br>
+    </div>
+
+    <div>
+        <p id="def">Throttle: </p>
+        <input type="text" id="inputthrottle" oninput="throttle()" placeholder="Throttling effect">
+        <p id="throttle"></p>
+    </div>
+
+
+    <div>
+        <p id="def">Debounce: </p>
+        <input type="text" id="inputdebounce" oninput="debounceforinput()" placeholder="Debouncing effect">
+        <p id="debouncetext"></p>
+    </div>
+
+
+
+
+    <h1>Mouse movement tracker by Throttling</h1>
+
+    <div id="trackpad" onmousemove="trackIt()">
+
+    </div>
+
+    <h2>Default:- <span id="defaulttrack"></span></h2>
+    <h2>Throttle:- <span id="throttletrack"></span></h2>
+    <h2>Debounce:- <span id="debouncetrack"></span></h2>
+</body>
+
+</html>
+<script src="index.js"></script>
