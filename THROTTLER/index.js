@@ -12,18 +12,31 @@ function def(){
     defaultText.textContent = text;
 }
 
-var id;
-function throttle(){
 
-    if(!id){
-        
-        id = setTimeout(()=>{
-            var text = inputthrottle.value;
-            throttleText.textContent = text;
-            id=false;
-
-    },1000)
+function updater(){
+    var text = inputthrottle.value;
+    throttleText.textContent = text;
 }
+
+inputthrottle.addEventListener("input",throttle(updater, 1000))
+
+
+function throttle(updater, limit){
+    
+    var flag = true;
+
+    return function updated(){
+        
+            if(flag){
+                flag = false;
+                setTimeout(()=>{
+                    updater();
+                    flag=true;
+            },limit)
+        }
+    }
+
+  
 }
 
 
