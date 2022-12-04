@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing</title>
+    <style>
+        #def {
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        #debounce,
+        #default {
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: 20px;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+        }
+
+        input{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Debouncing Practical Example</h1><br>
+
+    <div>
+        <p id="def">Default: </p>
+        <input type="text" id="input" oninput="def()" placeholder="Normal Code">
+        <p id="default"></p><br><br>
+    </div>
+
+    <div>
+        <p id="def">Debounce: </p>
+        <input type="text" id="inputdebounce" oninput="debounce()" placeholder="Debouncing effect">
+        <p id="debounce"></p>
+    </div>
+</body>
+
+</html>
+<script src="index.js"></script>
